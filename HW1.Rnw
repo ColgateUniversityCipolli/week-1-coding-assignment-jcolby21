@@ -148,7 +148,6 @@ package for \texttt{R}.
 \citep{aRtsy}
 
 
-
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -163,21 +162,26 @@ package for \texttt{R}.
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Create a numeric vector containing the integers from 0 to 10 inclusive. Hint -- the solution to this problem is one of these values.\\
 \textbf{Solution:}
+num.vector=0:10 %creates a vector called num.vector containing the integers from 0-10
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2b
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Complete the algebra to compute $2^{x+1} +2^{x-1}$ for each value in the numerical vector created in step 1. Make sure to save the result to a new numeric vector.\\
 \textbf{Solution:}
+algebra.vector= 2^(num.vector+1)+2^(num.vector-1) %Creates a vector with the results of the algebra
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2c
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Use the which() function to ask which result is 40.\\
 \textbf{Solution:}
+which(algebra.vector==40) %This which function returns the result or index of the number in the vector that gives a result of 40, which is the fifth index 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2d
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item What is the solution? That is, what value of x yields $2^{x+1} +2^{x-1} = 40$?\\
 \textbf{Solution:}
+%From part c we recieved the index of the number that yields 40 in the algebra.vector
+x.value=num.vector[5] %returns value of x that yields 40 which is in the fifth index, which is 4
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2e
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -185,5 +189,6 @@ package for \texttt{R}.
 \textbf{Solution:}
 \end{enumerate}
 \end{enumerate}
+%This approach would only work for the integers or a group of numbers of a finite size because the potential values of x need to fit in a vector. If the answer was not a potential value of x in the vector, the which statement would return it being in the 0th index which does not exist.
 
 \end{document}

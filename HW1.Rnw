@@ -59,11 +59,10 @@ library("aRtsy")
 \begin{figure}[H]
 \begin{center}
 <<echo=FALSE,fig.dim=c(4,4)>>=
-<<CollatzPlot1>>
 set.seed(1)
 canvas_collatz(colors = colorPalette("tuscany3"))
 @
-\caption{A caption...}
+\caption{A Canvas Collatz with Seed 1}
 \label{CollatzPlot1}
 \end{center}
 \end{figure}
@@ -80,9 +79,10 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 \begin{figure}[H]
 \begin{center}
 <<echo=FALSE,fig.dim=c(4,4)>>=
-<<CollatzPlot2>>
+set.seed(1313)
+canvas_collatz(colors = colorPalette("tuscany3"))
 @
-\caption{A caption...}
+\caption{A Canvas Collatz with Seed 1313}
 \label{CollatzPlot2}
 \end{center}
 \end{figure}
@@ -108,9 +108,9 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 \begin{figure}[H]
 \begin{center}
 <<echo=FALSE,fig.dim=c(4,4)>>=
-<<CollatzPlot3>>
+canvas_collatz(colors = colorPalette("vrolik4"), background = "#dbdbdb", n=72, angle.even = 0.0145, angle.odd = -0.05)
 @
-\caption{A caption...}
+\caption{A Canvas Collatz (3) with modifications}
 \label{CollatzPlot3}
 \end{center}
 \end{figure}

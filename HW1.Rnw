@@ -121,6 +121,20 @@ canvas_collatz(colors = colorPalette("vrolik4"), background = "#dbdbdb", n=72, a
   Note that I leave creating the R chunk and figure environment to you here. 
   Make sure that your code is well-formatted and your plot is appropriately scaled.\\
   \textbf{Solution:}
+<<CollatzPlot4, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
+@
+%Code to insert a figure [H]ere
+\begin{figure}[H]
+\begin{center}
+<<echo=FALSE,fig.dim=c(4,4)>>=
+canvas_collatz(colors = colorPalette("vrolik4"), background = "#fafafa", n=400, angle.even = 1.145, angle.odd = -10.05)
+@
+\caption{A Canvas Collatz (4) with modifications}
+\label{CollatzPlot3}
+\end{center}
+\end{figure}  
+  
+  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1g
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

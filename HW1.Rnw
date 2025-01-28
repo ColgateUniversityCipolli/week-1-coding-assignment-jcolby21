@@ -28,11 +28,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Install the \texttt{aRtsy} package. Provide the code in an R chunk   that does 
   not run. You only need to install it one time.\\
-\textbf{Solution:}
+\textbf{Solution:} 
 % Note that I have added eval=FALSE so that it won't run
 % each time I compile
-<<eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
-# Code to install the aRtsy package
+<<eval=FALSE, size= , warning=FALSE, message=FALSE>>=
+# install.packages("aRtsy")
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1b
@@ -41,8 +41,9 @@
   We need to load the library each time it is run.\\
 \textbf{Solution:}
 % Note here I have removed eval=FALSE so this code will run
-<<size="scriptsize", warning=FALSE, message=FALSE>>=
-@
+<<size= , warning=FALSE, message=FALSE>>=
+library("aRtsy")
+@ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -59,6 +60,8 @@
 \begin{center}
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot1>>
+set.seed(1)
+canvas_collatz(colors = colorPalette("tuscany3"))
 @
 \caption{A caption...}
 \label{CollatzPlot1}

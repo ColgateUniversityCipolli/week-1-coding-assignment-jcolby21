@@ -145,6 +145,10 @@ canvas_collatz(colors = colorPalette("vrolik4"), background = "#fafafa", n=400, 
 package for \texttt{R}.
 \end{enumerate}
 
+\citep{aRtsy}
+
+
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -11,7 +11,7 @@
                                   % We had to run tlmgr_install("enumitem") in R
 \usepackage{float}    % For telling R where to put a table/figure
 \usepackage{natbib}        %For the bibliography
-\bibliographystyle{apalike}%For the bibliography
+\bibliographystyle{apalike} %For the bibliography
 
 \begin{document}
 
@@ -31,8 +31,8 @@
 \textbf{Solution:} 
 % Note that I have added eval=FALSE so that it won't run
 % each time I compile
-<<eval=FALSE, size= , warning=FALSE, message=FALSE>>=
-# install.packages("aRtsy")
+<<eval=FALSE, warning=FALSE, message=FALSE>>=
+ #install.packages("aRtsy")
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QUESTION 1b
@@ -41,7 +41,7 @@
   We need to load the library each time it is run.\\
 \textbf{Solution:}
 % Note here I have removed eval=FALSE so this code will run
-<<size= , warning=FALSE, message=FALSE>>=
+<<warning=FALSE, message=FALSE>>=
 library("aRtsy")
 @ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,7 +130,7 @@ canvas_collatz(colors = colorPalette("vrolik4"), background = "#dbdbdb", n=72, a
 canvas_collatz(colors = colorPalette("vrolik4"), background = "#fafafa", n=400, angle.even = 1.145, angle.odd = -10.05)
 @
 \caption{A Canvas Collatz (4) with modifications}
-\label{CollatzPlot3}
+\label{CollatzPlot4}
 \end{center}
 \end{figure}  
   
@@ -142,13 +142,12 @@ canvas_collatz(colors = colorPalette("vrolik4"), background = "#fafafa", n=400, 
   package and use \verb|\citep{}| to add a parenthetical citation to the end of
   the sentence below.
 \textbf{Solution:} We created the generative art in Question 1 using the \texttt{aRtsy}
-package for \texttt{R}.
-\end{enumerate}
-
+package for \texttt{R}. 
 \citep{aRtsy}
-
-
+\end{enumerate}
+\bibliography{bibliography}
 \newpage
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -168,7 +167,7 @@ num.vector=0:10 %creates a vector called num.vector containing the integers from
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Complete the algebra to compute $2^{x+1} +2^{x-1}$ for each value in the numerical vector created in step 1. Make sure to save the result to a new numeric vector.\\
 \textbf{Solution:}
-algebra.vector= 2^(num.vector+1)+2^(num.vector-1) %Creates a vector with the results of the algebra
+algebra.vector= $2^(num.vector+1)+2^(num.vector-1)$ %Creates a vector with the results of the algebra
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % QUESTION 2c
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -189,6 +188,6 @@ x.value=num.vector[5] %returns value of x that yields 40 which is in the fifth i
 \textbf{Solution:}
 \end{enumerate}
 \end{enumerate}
-%This approach would only work for the integers or a group of numbers of a finite size because the potential values of x need to fit in a vector. If the answer was not a potential value of x in the vector, the which statement would return it being in the 0th index which does not exist.
+This approach would only work for the integers or a group of numbers of a finite size because the potential values of x need to fit in a vector. If the answer was not a potential value of x in the vector, the which statement would return it being in the 0th index which does not exist.
 
 \end{document}
